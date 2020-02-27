@@ -181,7 +181,7 @@ public class Sample {
      *     <li>Standard Deviation</li>
      * </ol>
      * The Summary is generated lazily. Therefore, the getSummary() function can be
-     * used more than once without any degredation of performance. In fact, the
+     * used more than once without any degradation of performance. In fact, the
      * {@linkplain #toString()} method relies on this.
      *
      * @return A Sample.Summary object with at least the guaranteed statistics mentioned.
@@ -323,7 +323,7 @@ public class Sample {
         private int maxValueLength;
 
         /**
-         * Create a new Summary. Stattistics and their values (as Strings) can be
+         * Create a new Summary. Statistics and their values (as Strings) can be
          * added using the {@link #addStatistic(String, String)} method.
          *
          * @param owner The Sample for which this Summary contains Statistics.
