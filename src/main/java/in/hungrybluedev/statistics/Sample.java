@@ -297,7 +297,17 @@ public class Sample {
     }
 
     public String toString() {
-        return getSummary().toString();
+        StringBuilder builder = new StringBuilder();
+        String unitString = stringIsEmpty(unit) ? "" : " " + unit;
+
+        for (double observation : values) {
+            builder.append(observation)
+                    .append(unitString)
+                    .append("\n");
+
+        }
+
+        return builder.toString() + "\n" + getSummary().toString();
     }
 
     /**
@@ -309,6 +319,9 @@ public class Sample {
         private final Sample owner;
         private final Map<String, String> map;
 
+        private int maxKeyLength;
+        private int maxValueLength;
+
         /**
          * Create a new Summary. Stattistics and their values (as Strings) can be
          * added using the {@link #addStatistic(String, String)} method.
@@ -318,6 +331,8 @@ public class Sample {
         Summary(final Sample owner) {
             this.owner = owner;
             map = new LinkedHashMap<>();
+            maxKeyLength = 0;
+            maxValueLength = 0;
         }
 
         /**
@@ -330,6 +345,8 @@ public class Sample {
             String unit = owner.getUnit();
             String updatedValue = unit.isEmpty() ? value : value + " " + unit;
             map.putIfAbsent(statistic, updatedValue);
+            maxKeyLength = Math.max(maxKeyLength, statistic.length());
+            maxValueLength = Math.max(maxValueLength, updatedValue.length());
         }
 
         /**
@@ -340,15 +357,10 @@ public class Sample {
             return map.getOrDefault(statistic, "Unknown");
         }
 
-        private static final int COLUMN_WIDTH = 10;
 
-        /*
-         * Pads a string with whitespace and aligns it left or right, depending on the
-         * value of the parameter left.
-         */
-        private static String fitString(final String text, final boolean left) {
-            String prefix = left ? "%-" : "%";
-            return String.format(prefix + Summary.COLUMN_WIDTH + "s", text);
+        private static String fitString(final String text, final int width, final boolean left) {
+            final String prefix = left ? "%-" : "%";
+            return String.format(prefix + width + "s", text);
         }
 
         /**
@@ -363,9 +375,9 @@ public class Sample {
                     .append("\n\n");
 
             for (Map.Entry<String, String> entry : map.entrySet()) {
-                builder.append(fitString(entry.getKey(), true))
+                builder.append(fitString(entry.getKey(), maxKeyLength, true))
                         .append(": ")
-                        .append(fitString(entry.getValue(), false))
+                        .append(fitString(entry.getValue(), maxValueLength, false))
                         .append("\n");
             }
 
