@@ -1,5 +1,8 @@
 package in.hungrybluedev.statistics;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+
 import java.util.Arrays;
 import java.util.Random;
 
@@ -36,6 +39,16 @@ public class SampleTest {
         observation[j] = temp;
     }
 
+    @BeforeMethod
+    public void setUp() {
+        Sample.resetStates();
+    }
+
+    @AfterMethod
+    public void tearDown() {
+        Sample.resetStates();
+    }
+
     @org.testng.annotations.Test
     public void testThreshold() {
         int[] testThresholds = {30, 20, 10, 40, 100, 2};
@@ -64,7 +77,7 @@ public class SampleTest {
     public void testGetSummary() {
         String expected = "Summary Statistics for Sample: Test sample\n" +
                 "\n" +
-                "Count   :       50 km\n" +
+                "Count   :          50\n" +
                 "Sum     : 1225.000 km\n" +
                 "Mean    :   24.500 km\n" +
                 "Variance:  208.250 km\n" +
@@ -218,7 +231,7 @@ public class SampleTest {
                 "\n" +
                 "Summary Statistics for Sample: Test sample\n" +
                 "\n" +
-                "Count   :       50 km\n" +
+                "Count   :          50\n" +
                 "Sum     : 1225.000 km\n" +
                 "Mean    :   24.500 km\n" +
                 "Variance:  208.250 km\n" +

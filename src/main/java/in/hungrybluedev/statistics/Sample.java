@@ -108,6 +108,11 @@ public class Sample {
         return text == null || text.isEmpty();
     }
 
+    public static void resetStates() {
+        setThreshold(DEFAULT_THRESHOLD);
+        setPrecision(DEFAULT_PRECISION);
+    }
+
     // Immutable fields
     private final String name;
     private final String unit;
@@ -343,7 +348,11 @@ public class Sample {
          */
         void addStatistic(final String statistic, final String value) {
             String unit = owner.getUnit();
-            String updatedValue = unit.isEmpty() ? value : value + " " + unit;
+
+            String updatedValue = unit.isEmpty() || statistic.equals("Count")
+                    ? value
+                    : value + " " + unit;
+
             map.putIfAbsent(statistic, updatedValue);
             maxKeyLength = Math.max(maxKeyLength, statistic.length());
             maxValueLength = Math.max(maxValueLength, updatedValue.length());
