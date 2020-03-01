@@ -54,6 +54,12 @@ Variance: 0.011 s
 Std Dev : 0.106 s
 ```
 
+## Documentation
+
+### 0.0.1
+
+Statistics v0.0.1 - [HungryBlueDev.in](https://hungrybluedev.in/docs/Statistics/0.0.1/)
+
 ## Status
 
 Currently it is pre-alpha software. There _will_ be breaking changes as we move forward.
