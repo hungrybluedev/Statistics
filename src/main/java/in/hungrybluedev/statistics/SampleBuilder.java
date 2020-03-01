@@ -18,7 +18,6 @@ import java.util.Objects;
  * to create Sample with different names (for the sake of easy organization).
  *
  * @author Subhomoy Haldar (@HungryBlueDev)
- * @noinspection unused, WeakerAccess, UnusedReturnValue
  */
 public class SampleBuilder {
     private final List<Double> observationList;
