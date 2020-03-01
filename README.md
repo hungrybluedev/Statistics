@@ -1,8 +1,6 @@
 # Statistics
 
-![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/hungrybluedev/Statistics?include_prereleases&style=plastic)
-![Travis (.org)](https://img.shields.io/travis/hungrybluedev/Statistics)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/ce2aaa29ced74f41a1399d4c7e9faeae)](https://app.codacy.com/manual/hungrybluedev/Statistics?utm_source=github.com&utm_medium=referral&utm_content=hungrybluedev/Statistics&utm_campaign=Badge_Grade_Dashboard)
+![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/hungrybluedev/Statistics?include_prereleases&style=plastic) ![Travis (.org)](https://img.shields.io/travis/hungrybluedev/Statistics) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/ce2aaa29ced74f41a1399d4c7e9faeae)](https://app.codacy.com/manual/hungrybluedev/Statistics?utm_source=github.com&utm_medium=referral&utm_content=hungrybluedev/Statistics&utm_campaign=Badge_Grade_Dashboard)
 
 ## Introduction
 
@@ -11,7 +9,7 @@ An easy to use Statistics library in Java. It is meant to be as general as possi
 ## Minimal Usage Example
 
 ```java
-        SampleBuilder builder = new SampleBuilder("Runtimes", "s");
+SampleBuilder builder = new SampleBuilder("Runtimes", "s");
 
         for (int i = 0; i < ITERATION_LIMIT; i++) {
             long timeStart = System.currentTimeMillis();
@@ -66,8 +64,7 @@ Currently it is pre-alpha software. There _will_ be breaking changes as we move 
 
 ### 0.0.1
 
-The first esposure to Code Review was in [this post](https://codereview.stackexchange.com/questions/238062/statistics-library-with-sample-samplebuilder-and-tests).
-I realised that there are significant architectural changes that have to be made to make the code better.
+The first exposure to Code Review was in [this post](https://codereview.stackexchange.com/questions/238062/statistics-library-with-sample-samplebuilder-and-tests). I realised that there are significant architectural changes that have to be made to make the code better.
 
 The JavaDoc for Statistics v0.0.1 - [HungryBlueDev.in](https://hungrybluedev.in/docs/Statistics/0.0.1/)
 
