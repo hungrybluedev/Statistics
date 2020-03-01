@@ -1,9 +1,8 @@
 # Statistics
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/ce2aaa29ced74f41a1399d4c7e9faeae)](https://app.codacy.com/manual/hungrybluedev/Statistics?utm_source=github.com&utm_medium=referral&utm_content=hungrybluedev/Statistics&utm_campaign=Badge_Grade_Dashboard)
-
 ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/hungrybluedev/Statistics?include_prereleases&style=plastic)
 ![Travis (.org)](https://img.shields.io/travis/hungrybluedev/Statistics)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/ce2aaa29ced74f41a1399d4c7e9faeae)](https://app.codacy.com/manual/hungrybluedev/Statistics?utm_source=github.com&utm_medium=referral&utm_content=hungrybluedev/Statistics&utm_campaign=Badge_Grade_Dashboard)
 
 ## Introduction
 
