@@ -58,27 +58,21 @@ Variance: 0.011 s
 Std Dev : 0.106 s
 ```
 
-## Documentation
-
-### 0.0.1
-
-Statistics v0.0.1 - [HungryBlueDev.in](https://hungrybluedev.in/docs/Statistics/0.0.1/)
-
 ## Status
 
 Currently it is pre-alpha software. There _will_ be breaking changes as we move forward.
 
-## Code Review posts
+## Versions
 
 ### 0.0.1
 
 The first esposure to Code Review was in [this post](https://codereview.stackexchange.com/questions/238062/statistics-library-with-sample-samplebuilder-and-tests).
 I realised that there are significant architectural changes that have to be made to make the code better.
 
+The JavaDoc for Statistics v0.0.1 - [HungryBlueDev.in](https://hungrybluedev.in/docs/Statistics/0.0.1/)
+
 ## To Do
 
 1. Make Sample completely immutable.
 2. Replace the idea of state variables with initial parameters during sample build time.
 3. Incorporate the use of Persistent Data Structures to improve performance.
-
-
