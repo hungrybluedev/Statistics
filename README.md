@@ -1,5 +1,7 @@
 # Statistics
 
+![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/hungrybluedev/Statistics?include_prereleases&style=plastic)
+
 ## Introduction
 
 An easy to use Statistics library in Java. It is meant to be as general as possible yet retain the usability and clean implementation.
