@@ -1,6 +1,7 @@
 # Statistics
 
 ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/hungrybluedev/Statistics?include_prereleases&style=plastic)
+![Travis (.org)](https://img.shields.io/travis/hungrybluedev/Statistics)
 
 ## Introduction
 
