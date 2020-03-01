@@ -15,7 +15,6 @@ import java.util.Map;
  * implemented do not adjust for the decrease in degree of freedom.
  *
  * @author Subhomoy Haldar (@HungryBlueDev)
- * @noinspection WeakerAccess, unused
  */
 public class Sample {
     /* Statically accessible parameters */
