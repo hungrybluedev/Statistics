@@ -1,30 +1,30 @@
-# Statistics
+# 📈 Statistics
 
 ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/hungrybluedev/Statistics?include_prereleases&style=plastic) ![Travis (.org)](https://img.shields.io/travis/hungrybluedev/Statistics) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/ce2aaa29ced74f41a1399d4c7e9faeae)](https://app.codacy.com/manual/hungrybluedev/Statistics?utm_source=github.com&utm_medium=referral&utm_content=hungrybluedev/Statistics&utm_campaign=Badge_Grade_Dashboard)
 
-## Introduction
+## ✨ Introduction
 
 An easy to use Statistics library in Java. It is meant to be as general as possible yet retain the usability and clean implementation.
 
-## Minimal Usage Example
+## 🛠 Minimal Usage Example
 
 ```java
 SampleBuilder builder = new SampleBuilder("Runtimes", "s");
 
-        for (int i = 0; i < ITERATION_LIMIT; i++) {
-            long timeStart = System.currentTimeMillis();
+for (int i = 0; i < ITERATION_LIMIT; i++) {
+    long timeStart = System.currentTimeMillis();
 
-            // The code to be timed goes here.
+    // The code to be timed goes here.
 
-            new BigInteger(1024, 2048, new Random());
+    new BigInteger(1024, 2048, new Random());
 
-            long timeEnd = System.currentTimeMillis();
+    long timeEnd = System.currentTimeMillis();
 
-            builder.addObservation((timeEnd - timeStart) / 1000.0);
-        }
+    builder.addObservation((timeEnd - timeStart) / 1000.0);
+}
 
-        Sample runtimes = builder.buildSample();
-        System.out.println(runtimes);
+Sample runtimes = builder.buildSample();
+System.out.println(runtimes);
 ```
 
 Output of the code will be something like:
@@ -56,11 +56,11 @@ Variance: 0.011 s
 Std Dev : 0.106 s
 ```
 
-## Status
+## 🔄 Status
 
 Currently it is pre-alpha software. There _will_ be breaking changes as we move forward.
 
-## Versions
+##  Versions
 
 ### 0.0.1
 
@@ -68,7 +68,7 @@ The first exposure to Code Review was in [this post](https://codereview.stackexc
 
 The JavaDoc for Statistics v0.0.1 - [HungryBlueDev.in](https://hungrybluedev.in/docs/Statistics/0.0.1/)
 
-## To Do
+## 📝 To Do
 
 1. Make Sample completely immutable.
 2. Replace the idea of state variables with initial parameters during sample build time.
